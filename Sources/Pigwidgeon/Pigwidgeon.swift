@@ -1,17 +1,22 @@
 import Alamofire
 
-internal final class Pigwidgeon: HTTPClient {
+/// A concrete HTTPClient implementation that sends HTTP requests.
+public final class Pigwidgeon: HTTPClient {
     private let session: any HTTPSession
 
     internal init(session: any HTTPSession) {
         self.session = session
     }
 
-    internal init() {
+    /// <#Description#>
+    public init() {
         self.session = Session.default
     }
 
-    internal func sendRequest<Request, Response>(
+    /// <#Description#>
+    /// - Parameter request: <#request description#>
+    /// - Returns: <#description#>
+    public func sendRequest<Request, Response>(
         _ request: Request
     ) async throws -> Response where Request: HTTPRequest, Response == Request.Response {
         return try await withCheckedThrowingContinuation { continuation in

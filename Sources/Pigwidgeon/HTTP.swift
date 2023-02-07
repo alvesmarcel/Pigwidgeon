@@ -1,10 +1,13 @@
-internal enum HTTP {
-    internal enum Scheme: String {
+/// A namespace that contains Scheme and Method types for HTTP requests.
+public enum HTTP {
+    /// The scheme component of the URL. The possible values are `http` or `https`.
+    public enum Scheme: String {
         case http
         case https
     }
 
-    internal enum Method: String {
+    /// The HTTP request method, e.g., `GET`, `PUT`, `POST`. Raw values are uppercased.
+    public enum Method: String {
         case get = "GET"
         case post = "POST"
         case put = "PUT"
