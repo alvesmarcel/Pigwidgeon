@@ -8,14 +8,14 @@ public final class Pigwidgeon: HTTPClient {
         self.session = session
     }
 
-    /// <#Description#>
+    /// Initialize Pigwidgeon.
     public init() {
         self.session = Session.default
     }
 
-    /// <#Description#>
-    /// - Parameter request: <#request description#>
-    /// - Returns: <#description#>
+    /// Send an HTTP request.
+    /// - Parameter request: The HTTPRequest to be sent.
+    /// - Returns: The result returned from the service.
     public func sendRequest<Request, Response>(
         _ request: Request
     ) async throws -> Response where Request: HTTPRequest, Response == Request.Response {

@@ -2,7 +2,7 @@ import Alamofire
 import XCTest
 @testable import Pigwidgeon
 
-final class PigwidgeonTests: XCTestCase {
+final class PigwidgeonUnitTests: XCTestCase {
     private var session: HTTPSessionMock!
     private var sut: Pigwidgeon!
     

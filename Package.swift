@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "Pigwidgeon",
     platforms: [
-        .iOS(.v11),
+        .iOS(.v13),
         .macOS(.v12)
     ],
     products: [
